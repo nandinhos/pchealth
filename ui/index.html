@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PBHealth — Diagnóstico de Hardware</title>
+    <link rel="stylesheet" href="assets/app.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand">
+            <span class="brand-mark">PB</span>
+            <span class="brand-name">PBHealth</span>
+            <span class="brand-tag">Diagnóstico de Hardware</span>
+        </div>
+        <div class="actions">
+            <button id="btn-refresh" class="btn btn-primary" disabled>
+                🔄 Diagnosticar agora
+            </button>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- Card principal: Saúde Geral -->
+        <section id="card-overall" class="card card-overall hidden">
+            <div class="overall-score" id="overall-score">
+                <div class="score-circle">
+                    <span class="score-value">--</span>
+                    <span class="score-label">/ 100</span>
+                </div>
+                <div class="overall-info">
+                    <h2 id="overall-status">Aguardando diagnóstico...</h2>
+                    <p id="overall-summary" class="muted">
+                        Clique em <strong>Diagnosticar agora</strong> para iniciar.
+                    </p>
+                    <p id="overall-meta" class="muted small"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading -->
+        <section id="card-loading" class="card hidden">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Coletando métricas... <span id="loading-progress"></span></p>
+            </div>
+        </section>
+
+        <!-- Erro fatal -->
+        <section id="card-error" class="card card-error hidden">
+            <h2>❌ Erro</h2>
+            <p id="error-message"></p>
+        </section>
+
+        <!-- Grid de categorias -->
+        <section id="cards-grid" class="cards-grid hidden">
+            <article class="card cat-machine" data-category="machine">
+                <header><h3>Máquina</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-bios" data-category="bios">
+                <header><h3>BIOS / Placa-mãe</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-cpu" data-category="cpu">
+                <header><h3>Processador</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-memory" data-category="memory">
+                <header><h3>Memória RAM</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-gpu" data-category="gpu">
+                <header><h3>Placa de vídeo</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-storage" data-category="storage">
+                <header><h3>Armazenamento</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-sensors" data-category="sensors">
+                <header><h3>Sensores</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-power" data-category="power">
+                <header><h3>Energia / Bateria</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-network" data-category="network">
+                <header><h3>Rede</h3></header>
+                <div class="card-body"></div>
+            </article>
+            <article class="card cat-os" data-category="os">
+                <header><h3>Sistema operacional</h3></header>
+                <div class="card-body"></div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <span>PBHealth · PB Informática · <span id="year">2026</span></span>
+        <span class="footer-spacer">·</span>
+        <span class="muted">v<span id="version">0.1.0</span></span>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

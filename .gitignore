@@ -1,0 +1,39 @@
+# Rust
+/target
+**/*.rs.bk
+Cargo.lock.bak
+
+# Tauri
+/src-tauri/target
+/src-tauri/gen
+
+# Builds pendrive
+/dist
+/*.exe
+/*.AppImage
+/*.deb
+/*.msi
+/*.dmg
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# DB local (não commitar dados de teste)
+/pbhealth.db
+/pbhealth.db-shm
+/pbhealth.db-wal
+
+# Config do técnico (não commitar dados pessoais)
+/config.toml
