@@ -4,6 +4,12 @@
 > em **18 de junho de 2026**. Não contém planos futuros — apenas o que está
 > pronto, o que é stub e como retomar.
 
+**Repositório:** https://github.com/nandinhos/pchealth
+**Último commit:** `7f5e141` (18/jun/2026)
+**Branch:** `main`
+
+Para visão executiva de 1 página, veja `RESUMO.md`.
+
 ---
 
 ## 1. Estado Atual (snapshot de 18/jun/2026)
